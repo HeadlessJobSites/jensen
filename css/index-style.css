@@ -1,6 +1,7 @@
 :root {
 	/* Colors */
 	--light-bkg-color: #ffffff;
+	--gray-bkg-color: #f0f0f0;
 	--dark-bkg-color: #092435;
 	--accent-color: #b88c47;
 	--dark-text-color: #2c2c2c;
@@ -11,11 +12,14 @@
 	/* Fonts */
 	--main-font: 'Cargo', serif;
 	--lg-title-font-size: 3.5rem;
-	--text-font-size: 1.125rem;
 	--m-title-font-size: 2.625rem;
+	--text-font-size: 1.125rem;
+
 
 	/* Spacings */
 	--container-padding: 1.25rem;
+	--pc-section-padding: 5rem;
+	--mobile-section-padding: 3rem;
 	--section-title-padding: 2rem;
 }
 
@@ -59,6 +63,16 @@ h1 {
 h2 {
 	font-size: var(--m-title-font-size);
 	font-weight: 700;
+}
+
+.section-container {
+	padding-block: var(--pc-section-padding);
+}
+
+@media (max-width: 768px) {
+	.section-container {
+		padding-block: var(--mobile-section-padding);
+	}
 }
 
 /* Map section */
@@ -217,12 +231,12 @@ h2 {
 .carousel-item .d-flex {
 	width: 100%;
 }
-.carousel-control-prev-icon {
+/* .carousel-control-prev-icon {
 	background-image: url(https:
 }
 .carousel-control-next-icon {
 	background-image: url(https:
-}
+} */
 .carousel-control-next-icon, .carousel-control-prev-icon {
 	width: 40px;
 	height: 40px;
@@ -266,6 +280,7 @@ h2 {
 	height: 450px;
 	display: block;
 }
+
 @media (max-width: 768px) {
 .intro-header {
 	font-size: 1.3em !important;
@@ -311,10 +326,9 @@ h2 {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
-.container {
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
+/* .container {
+	padding-block: var(--container-padding);
+} */
 #simpleCarousel .carousel-control-prev, #simpleCarousel .carousel-control-next {
 	width: auto;
 	top: 50%;
@@ -335,15 +349,42 @@ h2 {
 	max-width: 100%;
 	height: auto;
 }
+
+/* Quote section */
 .quote-section {
-	background-color: #539333;
-	color: #fff;
+	background-color: var(--dark-bkg-color);
+	color: var(--light-text-color);
 	padding: 60px 20px;
 }
-.quote-section .container {
+/* .quote-section .container {
 	max-width: 880px;
 	margin: auto;
+} */
+
+/* Quotes as cards */
+
+.quote-card {
+	max-width: 20rem;
+	padding: 1rem;
+	text-align: center;
 }
+
+.quote-inner {
+	display: flex;
+	gap: 2rem;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+@media (max-width: 768px) {
+	.quote-inner {
+			flex-direction: column;
+	}
+}
+
+/* Quote as blockqute text */
+
 .blockquote p {
 	font-size: 40px;
 	font-weight: 800;
@@ -353,6 +394,8 @@ h2 {
 	color: #fff;
 	font-size: 20px;
 }
+
+/* Benefits section */
 .benefits-section .container {
 	max-width: 1200px;
 }
@@ -387,7 +430,7 @@ h2 {
 .benefit-icon {
     position: relative;
     margin-bottom: -40px;
-    background-color: #539333;
+    background-color: var(--dark-bkg-color);
     border-radius: 0;
     width: 100px;
     border-radius: 50%;
@@ -396,7 +439,7 @@ h2 {
     align-items: center;
     justify-content: center;
     z-index: 2;
-    color: #fff;
+    color: var(--white-text-color);
 }
 .benefit-icon img {
 	width: 25px;
@@ -417,6 +460,14 @@ h2 {
 	}
 	.benefit-content {
 	}
+}
+
+/* Recruitment process */
+.process-bottom {
+	max-width: 50rem;
+}
+.process-section {
+	background-color: var(--gray-bkg-color);
 }
 .process-content p {
 	margin-bottom: 0;
@@ -804,7 +855,7 @@ font-size: 1.8rem;
 }
 
 .nav-link {
-	font-size: 1.1rem;
+	font-size: var(--text-font-size);
 }
 
 .navbar-dark .navbar-nav .active>.nav-link {
