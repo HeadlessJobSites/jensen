@@ -86,6 +86,9 @@ h1 {
 	.section-container {
 		padding-block: var(--mobile-section-padding);
 	}
+	.company-container {
+		padding-inline: 1.75rem;
+	}
 }
 
 /* Map section */
@@ -223,6 +226,12 @@ h1 {
 }
 .text-padding {
 	padding-inline: 3rem;
+}
+
+@media (max-width: 768px) {
+	.text-padding {
+		padding-inline: 1.75rem;
+	}
 }
 
 .team-member {
@@ -430,6 +439,9 @@ h1 {
 @media (max-width: 768px) {
 	.quote-inner {
 			flex-direction: column;
+	}
+	.quote-icon {
+		max-width: 10rem;
 	}
 }
 
