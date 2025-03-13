@@ -127,20 +127,21 @@
             <p class="my-4 m-px-2">JENSEN education grundades 1996 av Håkan Jensen, företagets vd och långsiktiga ägare. Vi är ett av Sveriges största privata utbildningsföretag med studerande inom fem verksamhetsområden – förskola, grundskola, gymnasium, vuxenutbildning samt yrkeshögskola. Våra skolor finns från Uppsala till Malmö och vi har förtroendet att utbilda drygt 17 000 studerande och har ca 2 000 medarbetare.</p>
             <p class="my-4 m-px-2">JENSEN kännetecknas av tydliga värderingar och en stark drivkraft för utveckling – både för våra medarbetare och studenter. Vi lägger stor vikt vid hälsa och erbjuder en trygg och stabil arbetsplats. Välkommen!</p>
         </div>
-        <div class="container pt-0 mb-5 pb-3 video-container m-my-0">
-            <!--<video id="talentechVideo" class="rounded-video" playsinline autoplay loop muted>
-            <source src="/files/This-is-us-TT.mp4" type="video/mp4">
+
+    </section>
+    <div class="container pt-0 mb-5 pb-3 video-container m-my-0">
+        <video id="talentechVideo" class="rounded-video" playsinline autoplay loop muted>
+            <source src="./files/JENSEN_blå_compressed.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="video-controls">
-            <button id="muteBtn"><img src="/files/volume-xmark-thin.svg" alt="Mute"></button>
-        </div>-->
-            <div class="front-image"><img src="./files/team.jpg"></div>
+            <button id="muteBtn"><img src="./files/volume-xmark-thin.svg" alt="Mute"></button>
         </div>
-    </section>
+        <!-- <div class="front-image"><img src="./files/team.jpg"></div> -->
     </div>
 
-    <!-- <script>
+
+    <script>
         document.addEventListener('DOMContentLoaded', () => {
             const video = document.getElementById('talentechVideo');
             const muteBtn = document.getElementById('muteBtn');
@@ -181,12 +182,12 @@
                 // Event listener for the mute button
                 muteBtn.addEventListener('click', () => {
                     video.muted = !video.muted;
-                    muteIcon.src = video.muted ? "/files/volume-xmark-thin.svg" : "/files/volume-off-thin.svg";
+                    muteIcon.src = video.muted ? "./files/volume-xmark-thin.svg" : "./files/volume-off-thin.svg";
                     muteIcon.alt = video.muted ? "Mute" : "Unmute";
                 });
             }
         });
-    </script> -->
+    </script>
 
     <section class="team-section" id="meet-the-team" style="background-color: #f0f0f0;">
         <div class="container section-container team-container">

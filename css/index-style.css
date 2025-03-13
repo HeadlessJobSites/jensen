@@ -21,6 +21,7 @@
 	--pc-section-padding: 5rem;
 	--mobile-section-padding: 3rem;
 	--section-title-padding: 2rem;
+	--section-inline-padding: 9rem;
 }
 
 /* Fonts */
@@ -65,8 +66,16 @@ h2 {
 	font-weight: 700;
 }
 
+.container {
+	padding-block: var(--container-padding);
+}
+
 .section-container {
 	padding-block: var(--pc-section-padding);
+}
+
+.company-container {
+	padding-inline: var(--section-inline-padding);
 }
 
 @media (max-width: 768px) {
@@ -326,9 +335,7 @@ h2 {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
-/* .container {
-	padding-block: var(--container-padding);
-} */
+
 #simpleCarousel .carousel-control-prev, #simpleCarousel .carousel-control-next {
 	width: auto;
 	top: 50%;
@@ -348,6 +355,37 @@ h2 {
 	width: 100%;
 	max-width: 100%;
 	height: auto;
+}
+.video-container {
+	position: relative;
+}
+
+.rounded-video {
+	width: 100%;
+	border-radius: 0;
+	overflow: hidden;
+}
+
+.video-controls {
+	position: absolute;
+	bottom: 40px;
+	right: 40px;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 5px;
+	border-radius: 5px;
+	z-index: 10;
+}
+
+.video-controls button {
+	background: none;
+	border: none;
+	color: white;
+	font-size: 16px;
+	margin-right: 10px;
+	cursor: pointer;
+	filter: brightness(0) invert(1);
+	width: 30px;
+	height: 30px;
 }
 
 /* Quote section */

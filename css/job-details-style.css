@@ -236,9 +236,9 @@ h2 {
 	margin-bottom: 20px;
 }
 
-.job-section-container {
+/* .job-section-container {
 	padding-block: var(--container-padding);
-}
+} */
 
 #simpleCarousel .carousel-control-prev, #simpleCarousel .carousel-control-next {
 	width: auto;
