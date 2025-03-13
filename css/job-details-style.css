@@ -1,59 +1,28 @@
-@font-face {
-	font-family: 'Telegraf';
-	src: url('/fonts/Telegraf-UltraLight.ttf');
-	font-weight: 200;
-	font-style: normal;
-	font-display: swap;
+:root {
+	/* Colors */
+	--light-bkg-color: #ffffff;
+	--gray-bkg-color: #f0f0f0;
+	--dark-bkg-color: #092435;
+	--accent-color: #b88c47;
+	--dark-text-color: #2c2c2c;
+	--light-text-color: #eeeeee;
+	--white-text-color: #ffffff;
+	--dark-hover-color: #222222;
+
+	/* Fonts */
+	--main-font: 'Cargo', serif;
+	--lg-title-font-size: 3.5rem;
+	--m-title-font-size: 2.625rem;
+	--text-font-size: 1.125rem;
+
+
+	/* Spacings */
+	--container-padding: 1.25rem;
+	--pc-section-padding: 5rem;
+	--mobile-section-padding: 3rem;
+	--section-title-padding: 2rem;
 }
-@font-face {
-	font-family: 'Telegraf';
-	src: url('/fonts/Telegraf-Medium.ttf');
-	font-weight: 500;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'Telegraf';
-	src: url('/fonts/Telegraf-SemiBold.ttf');
-	font-weight: 600;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'Telegraf';
-	src: url('/fonts/Telegraf-Regular.ttf');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'Telegraf';
-	src: url('/fonts/Telegraf-UltraBold.ttf');
-	font-weight: 800;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'Telegraf';
-	src: url('/fonts/Telegraf-Light.ttf');
-	font-weight: 300;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'Telegraf';
-	src: url('/fonts/Telegraf-Black.ttf');
-	font-weight: 900;
-	font-style: normal;
-	font-display: swap;
-}
-@font-face {
-	font-family: 'Telegraf';
-	src: url('/fonts/Telegraf-UltraBold.ttf');
-	font-weight: bold;
-	font-style: normal;
-	font-display: swap;
-}
+
 h1#form-heading {
     font-size: 25px !important;
 }
@@ -119,10 +88,11 @@ h1#form-heading {
 .job-item {
 	word-wrap: break-word;
 }
-body {
-/*	font-family: Telegraf;
-	font-weight:;*/
+
+.similar-jobs-section {
+	background-color: var(--gray-bkg-color);
 }
+
 h1 {
 	font-family: Telegraf;
 	font-weight: 800;
@@ -182,12 +152,12 @@ h2 {
 .carousel-item .d-flex {
 	width: 100%;
 }
-.carousel-control-prev-icon {
+/* .carousel-control-prev-icon {
 	background-image: url(https:
 }
 .carousel-control-next-icon {
 	background-image: url(https:
-}
+} */
 .carousel-control-next-icon, .carousel-control-prev-icon {
 	width: 40px;
 	height: 40px;
@@ -265,10 +235,11 @@ h2 {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
-.container {
-	padding-top: 20px;
-	padding-bottom: 20px;
+
+.job-section-container {
+	padding-block: var(--container-padding);
 }
+
 #simpleCarousel .carousel-control-prev, #simpleCarousel .carousel-control-next {
 	width: auto;
 	top: 50%;
