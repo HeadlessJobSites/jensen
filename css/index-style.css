@@ -13,7 +13,8 @@
 	--main-font: 'Cardo', serif;
 	--lg-title-font-size: 3.5rem;
 	--m-title-font-size: 2.625rem;
-	--text-font-size: 1.125rem;
+	--text-font-size: 1.125em;
+	--text-font-size-sm: 0.95rem;
 
 
 	/* Spacings */
@@ -457,6 +458,7 @@ h1 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	font-size: var(--text-font-size-sm);
 	margin-bottom: 40px;
 	margin-top: 30px;
 	text-align: center;
@@ -464,6 +466,17 @@ h1 {
 	flex: 1;
 	flex-basis: calc(25% - 60px);
 }
+
+.benefits-about,
+.benefits-bottom {
+	margin-block-start: 1.2rem;
+	margin-block-end: 2.2rem;
+}
+
+.benefits-top {
+	/* font-size: 1.4rem; */
+}
+
 .benefit-content {
     display: flex;
     flex-direction: column;
@@ -481,7 +494,7 @@ h1 {
     margin-bottom: -40px;
     background-color: var(--dark-bkg-color);
     border-radius: 0;
-    width: 100px;
+    width: 115px;
     border-radius: 50%;
     height: 140px;
     display: flex;
