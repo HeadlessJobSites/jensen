@@ -2,6 +2,7 @@
 	/* Colors */
 	--light-bkg-color: #ffffff;
 	--gray-bkg-color: #f0f0f0;
+	--secondary-gray-color: #f1f1f1;
 	--dark-bkg-color: #092435;
 	--accent-color: #b88c47;
 	--dark-text-color: #2c2c2c;
@@ -10,7 +11,7 @@
 	--dark-hover-color: #222222;
 
 	/* Fonts */
-	--main-font: 'Cargo', serif;
+	--main-font: 'Cardo', serif;
 	--lg-title-font-size: 3.5rem;
 	--m-title-font-size: 2.625rem;
 	--text-font-size: 1.125rem;
@@ -90,34 +91,32 @@ h1#form-heading {
 }
 
 .similar-jobs-section {
-	background-color: var(--light-bkg-color);
+	background-color: var(--secondary-gray-color);
 }
 
-h1 {
-	font-family: Telegraf;
+/* h1 {
+	font-family: "Telegraf";
 	font-weight: 800;
 	font-size: 4rem;
 	margin-bottom: 2rem;
-}
-#position-title {
+} */
+/* #position-title {
     font-family: Telegraf;
     font-weight: 800;
     font-size: 4rem;
-}
-.btn-primary {
+} */
+/* .btn-primary {
 	border: 0;
 	padding: 0.6rem 1.5rem;
-}
+} */
 .nav-link {
-	font-size: 1.1rem;
+	font-size: var(--text-font-size);
 }
 .rounded-img {
 	width: 100%;
 	margin-top: 20px;
 }
-h2 {
-	font-size: 3rem;
-}
+
 .background-image {
 	background-size: cover;
 	background-position: center;
@@ -572,14 +571,14 @@ a:hover {
 	font-weight: 800;
 	display: block;
 }
-.apply-btn {
+/* .apply-btn {
     color: white !important;
     border: none;
     text-decoration: none !important;
     font-size: 16px;
     padding: 10px 20px;
     font-weight: bold;
-}
+} */
 @media (min-width: 768px) {
 	.job-info {
 		margin-bottom: 0;
@@ -708,10 +707,10 @@ font-size: 1.8rem;
 .navbar-dark .navbar-nav .nav-link {
     color: rgba(255, 255, 255);
 }
-.process-section .process-content h3 {
+/* .process-section .process-content h3 {
     font-size: 1rem;
     font-weight: 700;
-}
+} */
 .card-title {
     font-size: 1.25rem;
     font-weight: 500;

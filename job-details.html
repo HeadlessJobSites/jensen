@@ -120,13 +120,13 @@
     </script>
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(0, 0, 0, 0.0);">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container m-py-1">
             <a class="navbar-brand" href="./" aria-label="Home">
                 <img src="./files/logo_jensen_vit.png" class="d-inline-block align-top" alt="JENSEN education logo">
             </a>
             <div class="d-flex justify-content-end align-items-center flex-grow-1">
-                <a class="nav-link ml-auto d-lg-none btn btn-primary apply-btn m-mr-2" href="#appform-header">Ansök</a>
+                <a class="nav-link ml-auto d-lg-none btn btn-primary apply-btn btn-light-border m-mr-2" href="#appform-header">Ansök</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -311,7 +311,7 @@
 
     <section id="tt-talentech-section-2" class="team-section py-5 mb-5 pb-4 m-my-0 m-py-5">
         <center>
-            <h2 class="container mb-0 pb-0">Träffa <span class="organization-unit" class="title-alt"></span><span class="title-alt"> teamet</span></h2>
+            <h2 class="container section-title">Träffa <span class="organization-unit" class="title-alt"></span><span class="title-alt"> teamet</span></h2>
         </center>
         <div class="container mt-0 pt-2 m-ml-0 m-px-0">
             <div class="row mt-3 m-mt-2 m-mx-0">
@@ -322,9 +322,7 @@
 
     <section id="process" class="process-section">
         <div class="container process-container section-container">
-            <h2>Rekryterings&shy;process</span></h2>
-        </div>
-        <div class="container">
+            <h2 class="section-title"><span class="title-alt">Rekryterings&shy;process</span></h2>
             <div class="row">
                 <!-- DISABLE GOBI VIDEO
             <div class="col-md-4 px-0">
@@ -387,13 +385,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row process-row mt-5 process-bottom">
-                        <div class="col-md-12 col-sm-4 process-item">
-                            <div class="">
-                                <h3>Personuppgifter</h3>
-                                <p>Vi behandlar alla ansökningar konfidentiellt. Individens personliga integritet och säkerheten för dennes personuppgifter är viktig för oss på JENSEN education. JENSEN ansvarar för att se till att alla personuppgifter behandlas på ett korrekt sätt. Uppgifter som lämnats in i samband med din ansökan raderas automatiskt efter 26 månader.</p>
-                            </div>
-                        </div>
+                    <div class="process-bottom">
+                        <h3 class="process-bottom-title">Personuppgifter</h3>
+                        <p class="process-bottom-text">Vi behandlar alla ansökningar konfidentiellt. Individens personliga integritet och säkerheten för dennes personuppgifter är viktig för oss på JENSEN education. JENSEN ansvarar för att se till att alla personuppgifter behandlas på ett korrekt sätt. Uppgifter som lämnats in i samband med din ansökan raderas automatiskt efter 26 månader.</p>
                     </div>
                 </div>
             </div>
@@ -401,10 +395,12 @@
     </section>
 
     <section class="registration-form-section">
-        <h2 id="appform-header" class="container section-container" id="appFormWrapper"><span class="title-alt">Anmälnings&shy;formulär</span></h2>
-        <!-- Application form or alternative message -->
-        <div id="originalContentContainer">
-            <div id="applicationFormContainer"></div>
+        <div class="container section-container">
+            <h2 class="section-title" id="appform-header" id="appFormWrapper"><span class="title-alt">Anmälnings&shy;formulär</span></h2>
+            <!-- Application form or alternative message -->
+            <div id="originalContentContainer">
+                <div id="applicationFormContainer"></div>
+            </div>
         </div>
     </section>
 
@@ -460,7 +456,7 @@
 
     <section id="tt-feature-section" class="similar-jobs-section" id="jobs-anchor">
         <div class="container section-container similar-jobs-container">
-            <h2 class="my-5 m-my-0">Liknande jobb</h2>
+            <h2 class="section-title">Liknande<span class="title-alt"> jobb</span></h2>
             <div class="row my-3">
                 <div class="col-md-3 mb-3">
                     <label for="locationFilter">Plats</label>
@@ -488,8 +484,8 @@
     <section class="action-section">
         <div class="container action-container section-container" style="text-align: center;">
             <div class="action-top">
-                <h2>Hittade du inte tjänsten för dig?</h2>
-                <div class="mt-4 mb-2">
+                <h2 class="section-title">Hittade du inte tjänsten för dig?</h2>
+                <div class="">
                     <p>Prenumerera på tjänster så får du ett mail när det finns en ledig tjänst som matchar dina preferenser.</p>
                 </div>
             </div>
@@ -523,7 +519,7 @@
     </section>
 
     <!-- Footer top section -->
-    <footer class="text-center bg-dark text-light py-5">
+    <footer class="text-center bg-dark text-light">
         <div class="container section-container">
             <img src="./files/logo_jensen_vit.png" alt="JENSEN education Logo" class="mb-3" style="max-width: 180px;">
             <div class="mt-3 mb-4" style="max-width: 600px; margin: auto;">
