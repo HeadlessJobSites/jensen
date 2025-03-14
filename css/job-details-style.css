@@ -558,9 +558,15 @@ a:hover {
     line-height: 1.6;
 }
 
-@media (max-width: 768px) {
-	.job-title span:nth-child(2),
+@media (max-width: 1020px) {
   .job-title2 {
+	word-break: break-word;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+}
+@media (max-width: 768px) {
+	.job-title span:nth-child(2) {
 	word-break: break-word;
 	overflow-wrap: break-word;
 	word-wrap: break-word;
