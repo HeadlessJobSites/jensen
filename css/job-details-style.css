@@ -558,11 +558,13 @@ a:hover {
     line-height: 1.6;
 }
 
-.job-title span:nth-child(2),
-.job-title2 {
+@media (max-width: 991.98px) {
+	.job-title span:nth-child(2),
+  .job-title2 {
 	word-break: break-word;
 	overflow-wrap: break-word;
 	word-wrap: break-word;
+}
 }
 
 .job-title2 {
