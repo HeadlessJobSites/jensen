@@ -121,24 +121,69 @@
 </div>
 -->
     <section class="company-section" id="company-section">
-        <div class="container section-container company-container">
-            <h2 class="intro-header section-title">Är du vår <span class="title-alt"> nya kollega?</span></h2>
-            <p class="mb-4 m-px-2">Är du en person med höga ambitioner och ett stort engagemang för människors utbildning? Då kan JENSEN education vara rätt för dig!</p>
-            <p class="my-4 m-px-2">JENSEN education grundades 1996 av Håkan Jensen, företagets vd och långsiktiga ägare. Vi är ett av Sveriges största privata utbildningsföretag med studerande inom fem verksamhetsområden – förskola, grundskola, gymnasium, vuxenutbildning samt yrkeshögskola. Våra skolor finns från Uppsala till Malmö och vi har förtroendet att utbilda drygt 17 000 studerande och har ca 2 000 medarbetare.</p>
-            <p class="mt-4 mb-0 m-px-2">JENSEN kännetecknas av tydliga värderingar och en stark drivkraft för utveckling – både för våra medarbetare och studenter. Vi lägger stor vikt vid hälsa och erbjuder en trygg och stabil arbetsplats. Välkommen!</p>
+        <div class="container section-container">
+            <div class="company-info company-container">
+                <h2 class="intro-header section-title">Är du vår <span class="title-alt"> nya kollega?</span></h2>
+                <p class="mb-4 m-px-2">Är du en person med höga ambitioner och ett stort engagemang för människors utbildning? Då kan JENSEN education vara rätt för dig!</p>
+                <p class="my-4 m-px-2">JENSEN education grundades 1996 av Håkan Jensen, företagets vd och långsiktiga ägare. Vi är ett av Sveriges största privata utbildningsföretag med studerande inom fem verksamhetsområden – förskola, grundskola, gymnasium, vuxenutbildning samt yrkeshögskola. Våra skolor finns från Uppsala till Malmö och vi har förtroendet att utbilda drygt 17 000 studerande och har ca 2 000 medarbetare.</p>
+                <p class="mt-4 mb-0 m-px-2">JENSEN kännetecknas av tydliga värderingar och en stark drivkraft för utveckling – både för våra medarbetare och studenter. Vi lägger stor vikt vid hälsa och erbjuder en trygg och stabil arbetsplats. Välkommen!</p>
+            </div>
+            <div class="video-container">
+                <video id="talentechVideo" class="rounded-video" playsinline autoplay loop muted>
+                    <source src="./files/TalenTech-JENSEN.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-controls">
+                    <button id="muteBtn"><img src="./files/volume-xmark-thin.svg" alt="Mute"></button>
+                </div>
+                <!-- <div class="front-image"><img src="./files/team.jpg"></div> -->
+            </div>
         </div>
 
     </section>
-    <div class="container video-container">
-        <video id="talentechVideo" class="rounded-video" playsinline autoplay loop muted>
-            <source src="./files/TalenTech-JENSEN.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="video-controls">
-            <button id="muteBtn"><img src="./files/volume-xmark-thin.svg" alt="Mute"></button>
+
+    <section class="activities-section">
+        <div class="container section-container activities-container">
+            <h2 class="section-title"><span class="title-alt">Verksamheter</span></h2>
+            <div class="activities-inner">
+                <div class="activities-card" onclick="location.href='https://www.jensenforskola.se/';">
+                    <img class="activities-card-image" src="./files/FSK.jpg" alt="Förskola">
+                    <div class="activities-card-content">
+                        <h3 class="activities-card-title">Förskola</h3>
+                        <p class="activities-card-text">Bildningsresan börjar i förskolan. Vi har enbart förskolor med toppkvalitet – 96% av våra föräldrar rekommenderar oss.</p>
+                    </div>
+                </div>
+                <div class="activities-card" onclick="location.href='https://www.jensengrundskola.se/';">
+                    <img class="activities-card-image" src="./files/GR.jpg" alt="Grundskola">
+                    <div class="activities-card-content">
+                        <h3 class="activities-card-title">Grundskola</h3>
+                        <p class="activities-card-text">Den klassiska svenska skolan – finns hos oss! Vi är bäst i Sverige på studiero och når höga resultat inom alla områden.</p>
+                    </div>
+                </div>
+                <div class="activities-card" onclick="location.href='https://www.jensengymnasium.se/';">
+                    <img class="activities-card-image" src="./files/GY.jpg" alt="Gymnasium">
+                    <div class="activities-card-content">
+                        <h3 class="activities-card-title">Gymnasium</h3>
+                        <p class="activities-card-text">Bildning är målet! Vi förbereder för högre studier med djupa ämneskunskaper, litteratur, läsning och skrivande på en hög nivå.</p>
+                    </div>
+                </div>
+                <div class="activities-card" onclick="location.href='https://www.jensenkomvux.se/';">
+                    <img class="activities-card-image" src="./files/Komvux.jpg" alt="Komvux/SFI">
+                    <div class="activities-card-content">
+                        <h3 class="activities-card-title">Komvux/SFI</h3>
+                        <p class="activities-card-text">Ta steget och läs på komvux. Vi är störst i Stockholm inom gymnasial vuxenutbildning. Vi utbildar även inom SFI.</p>
+                    </div>
+                </div>
+                <div class="activities-card" onclick="location.href='https://www.jensenyh.se/';">
+                    <img class="activities-card-image" src="./files/YH_mini.jpg" alt="Yrkeshögskola">
+                    <div class="activities-card-content">
+                        <h3 class="activities-card-title">Yrkeshögskola</h3>
+                        <p class="activities-card-text">Kvalificerade yrkesutbildningar för framtidens specialister inom IT, teknik, fastighet och andra yrkesområden.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- <div class="front-image"><img src="./files/team.jpg"></div> -->
-    </div>
+    </section>
 
 
     <script>
