@@ -121,6 +121,7 @@ strong{
 }
 
 .activities-card {
+	position: relative !important;
 	padding: var(--card-padding);
 	background-color: var(--light-bkg-color);
 	overflow: hidden;
@@ -148,6 +149,14 @@ strong{
 .activities-card-title {
 	font-size: var(--text-font-size);
 	font-weight: 700;
+}
+
+.activities-card-link {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
 }
 
 @media (max-width: 600px) {
