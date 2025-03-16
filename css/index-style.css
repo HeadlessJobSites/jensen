@@ -624,6 +624,7 @@ strong{
 		overflow-x: auto;
 	}
 	.benefit-item {
+		min-width: 350px;
 		flex: 0 0 80%;
 		margin-right: 0;
 	}
@@ -676,7 +677,7 @@ strong{
 		margin-bottom: 2rem;
 	}
 	.process-item-video {
-		min-width: 300px;
+		min-width: 325px;
 		padding-right: 5rem;
 	}
 	.process-content {
@@ -729,8 +730,9 @@ strong{
 
 @media (max-width: 768px) {
 	.process-item {
-    flex: 0 0 80%;
-    margin-right: 10px;
+    flex: 1 0 80%;
+    min-width: 325px;
+    overflow-y: hidden;
 	}
 }
 @media (max-width: 570px) {
@@ -747,8 +749,7 @@ strong{
 		margin-right: -15px;
 	}
 	.process-item {
-		flex: 0 0 50%;
-		max-width: 80%;
+		
 		padding-left: 10px;
 		padding-right: 10px;
 	}
@@ -821,9 +822,7 @@ strong{
     align-items: start;
 	}
 	.team-item, .process-item {
-		flex: 0 0 60%;
-		margin-right: 0px;
-		padding-right: 0px;
+	
 	}
 	.team-content {
 	}

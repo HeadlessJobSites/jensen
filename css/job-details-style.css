@@ -374,7 +374,7 @@ h1#form-heading {
 		margin-bottom: 2rem;
 	}
 	.process-item-video {
-		min-width: 300px;
+		min-width: 325px;
 		padding-right: 5rem;
 	}
 	.process-content {
@@ -413,8 +413,9 @@ h1#form-heading {
 }
 @media (max-width: 768px) {
 	.process-item {
-    flex: 0 0 80%;
-    margin-right: 10px;
+    flex: 1 0 80%;
+		min-width: 325px;
+    overflow-y: hidden;
 	}
 }
 .process-section .row {
@@ -428,8 +429,6 @@ h1#form-heading {
 		margin-right: -15px;
 	}
 	.process-item {
-		flex: 0 0 50%;
-		max-width: 80%;
 		padding-left: 10px;
 		padding-right: 10px;
 	}
@@ -501,9 +500,7 @@ h1#form-heading {
     align-items: start;
 	}
 	.team-item, .process-item {
-		flex: 0 0 60%;
-		margin-right: 0px;
-		padding-right: 0px;
+	
 	}
 	.team-content {
 	}
