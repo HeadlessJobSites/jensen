@@ -352,7 +352,7 @@ h1#form-heading {
 	display: flex;
 	flex-direction: column;
 	align-items: start;
-	margin-bottom: 30px;
+	/* margin-bottom: 30px; */
 	text-align: left;
 	min-width: 250px;
 	flex: 1;

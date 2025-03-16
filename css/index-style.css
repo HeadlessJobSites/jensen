@@ -632,19 +632,25 @@ strong{
 }
 
 /* Recruitment process */
+.gobi-collection .gobi-card {
+	size: 700px;
+}
+
 .process-bottom {
 	background-color: var(--light-bkg-color);
 	margin-inline: auto;
 	margin-block-start: 3rem;
 	margin-block-end: 1.5rem;
 	padding: 3rem;
-	max-width: calc(1200px - 100px);
 }
 .process-section {
 	background-color: var(--gray-bkg-color);
 }
 .process-content p {
 	margin-bottom: 0;
+}
+.process-content.no-background {
+	background-color: transparent;
 }
 .process-section .container {
 	max-width: 1200px;
@@ -658,7 +664,7 @@ strong{
 	display: flex;
 	flex-direction: column;
 	align-items: start;
-	margin-bottom: 30px;
+	/* margin-bottom: 30px; */
 	text-align: left;
 	min-width: 250px;
 	flex: 1;
@@ -675,6 +681,7 @@ strong{
 	width: 100%;
 	height: 100%;
 }
+
 .process-icon {
 	position: relative;
 	margin-bottom: -50px;
