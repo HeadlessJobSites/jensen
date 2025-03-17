@@ -507,6 +507,7 @@ strong{
 	overflow: hidden;
 }
 
+
 .video-controls {
 	position: absolute;
 	bottom: 40px;
@@ -527,6 +528,20 @@ strong{
 	filter: brightness(0) invert(1);
 	width: 30px;
 	height: 30px;
+}
+
+@media (max-width: 768px) {
+	.video-controls button {
+		width: 30px;
+		height: 30px; 
+		padding: 5px; 
+ }
+  .video-controls {
+    display: none;
+		bottom: 20px;
+		right: 20px;
+    border-radius: 50px;
+  }	
 }
 
 /* Quote section */
