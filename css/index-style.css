@@ -86,9 +86,13 @@ strong{
 	padding-block: var(--container-padding);
 }
 
-@media (max-width: 520px) {
-	.container {
-		
+.footer-text {
+	max-width: 600px;
+}
+
+@media (max-width: 768px) {
+	.footer-text {
+		max-width: 100%;
 	}
 }
 
