@@ -433,7 +433,7 @@ h1#form-heading {
 		padding-right: 10px;
 	}
 	.process-section .row {
-		justify-content: left;
+		/* justify-content: left; */
 	}
 .process-section .process-row {
     justify-content: left;
@@ -821,4 +821,20 @@ a.nav-link.new-link {
     .mobile-only {
         display: none !important;
     }
+}
+
+@media (max-width: 768px) {
+	.hide-on-mobile {
+	display: none;
+  }
+	.gobi-video-item {
+		padding: 0;
+		margin: 0;
+	}
+}
+
+@media (min-width: 769px) {
+	.hide-on-pc {
+		display: none;
+	}
 }

@@ -86,6 +86,16 @@ strong{
 	padding-block: var(--container-padding);
 }
 
+@media (max-width: 520px) {
+	.container,
+	.section-title,
+	.video-container,
+	.feature-item,
+	.filters-container {
+		padding-inline: 0.5rem;
+	}
+}
+
 .section-container {
 	padding-block: var(--pc-section-padding);
 }
@@ -101,16 +111,16 @@ strong{
 
 @media (max-width: 820px) {
 	.company-container {
-		padding-inline: 1rem;
+		padding-inline: 0;
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 414px) {
 	.section-container {
 		padding-block: var(--mobile-section-padding);
 	}
 	.company-container {
-		padding-inline: 1.75rem;
+		padding-inline: 0;
 	}
 }
 
@@ -127,6 +137,12 @@ strong{
 	overflow: hidden;
 	transition: background-color .2s;
 	cursor: pointer;
+}
+
+@media (max-width: 414px) {
+	.activities-card {
+		padding-inline: 0.5rem;
+	}
 }
 
 .activities-card:hover {
@@ -157,6 +173,12 @@ strong{
 	bottom: 0;
 	left: 0;
 	width: 100%;
+}
+
+@media (max-width: 768px) {
+	.activities-container {
+			
+	}
 }
 
 @media (max-width: 600px) {
@@ -310,7 +332,7 @@ strong{
 
 @media (max-width: 768px) {
 	.text-padding {
-		padding-inline: 1.75rem;
+		padding-inline: 1rem;
 	}
 }
 
@@ -576,6 +598,15 @@ strong{
 	background-color: var(--gray-bkg-color);
 }
 
+@media (max-width: 768px) {
+	.benefits-about,
+  .benefits-bottom {
+	/* max-width: 60rem;
+	margin-inline: auto; */
+	padding: 2rem;
+}
+}
+
 .benefits-about {
 	margin-block-end: 2rem;
 }
@@ -587,6 +618,12 @@ strong{
 
 .benefits-bottom {
 	margin-block-start: 1.3rem;
+}
+
+@media (max-width: 768px) {
+	.benefits-container {
+		padding-inline: 1rem;
+	}
 }
 
 .benefits-top {
@@ -646,12 +683,31 @@ strong{
 	size: 700px;
 }
 
+@media (max-width: 768px) {
+	.section-title.process-section-title,
+	.section-title.benefits-title {
+		padding-inline: 0;
+	}
+	.process-container {
+	padding-inline: 1rem;
+}
+}
+
+
 .process-bottom {
 	background-color: var(--light-bkg-color);
 	margin-inline: auto;
 	margin-block-start: 3rem;
 	margin-block-end: 1.5rem;
 	padding: 3rem;
+}
+
+@media (max-width: 768px) {
+	.process-bottom {
+	/* max-width: 60rem;
+	margin-inline: auto; */
+	padding: 2rem;
+}
 }
 .process-section {
 	background-color: var(--gray-bkg-color);
@@ -762,12 +818,13 @@ strong{
 		padding-right: 10px;
 	}
 	.process-section .row {
-		justify-content: left;
+		/* justify-content: left; */
 	}
 .process-section .process-row {
     justify-content: left;
     display: flex;
     flex-wrap: nowrap;
+		padding-inline: 0.3rem;
 }
 }
 .team-section .container {
@@ -929,7 +986,7 @@ a:hover {
 @media (max-width: 420px) {
 	.no-jobs-message {
 		max-width: 20rem;
-		padding-left: 1rem;;
+		padding-left: 1rem;
 	}
 }
 
@@ -1167,4 +1224,20 @@ a.nav-link.new-link {
     .mobile-only {
         display: none !important;
     }
+}
+
+@media (max-width: 768px) {
+	.hide-on-mobile {
+	display: none;
+  }
+	.gobi-video-item {
+		padding: 0;
+		margin: 0;
+	}
+}
+
+@media (min-width: 769px) {
+	.hide-on-pc {
+		display: none;
+	}
 }
