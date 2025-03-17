@@ -87,13 +87,13 @@ strong{
 }
 
 @media (max-width: 520px) {
-	.container,
+	/* .container,
 	.section-title,
 	.video-container,
 	.feature-item,
 	.filters-container {
 		padding-inline: 0.5rem;
-	}
+	} */
 }
 
 .section-container {
