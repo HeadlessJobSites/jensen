@@ -615,8 +615,8 @@
                     if (job.country) { // Check if job has a country
                         locationSet.add(job.country);
                     }
-                    if (job.title) { // Check if job has a title
-                        jobTypeSet.add(job.title);
+                    if (job.occupation_area) { // Check if job has a title
+                        jobTypeSet.add(job.occupation_area);
                     }
                 });
 
@@ -645,7 +645,7 @@
                 const selectedJobType = $('#jobTypeFilter').val();
                 filteredJobs = filteredJobs.filter(job => {
                     return (selectedCountry === 'All' || job.country === selectedCountry) &&
-                        (selectedJobType === 'All' || job.title === selectedJobType);
+                        (selectedJobType === 'All' || job.occupation_area === selectedJobType);
                 });
 
                 // Add job cards to the DOM

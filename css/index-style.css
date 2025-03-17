@@ -118,9 +118,6 @@ strong{
 	.company-container {
 		padding-inline: 0;
 	}
-	.company-container p {
-		padding-inline: 0;
-	}
 }
 
 @media (max-width: 414px) {
