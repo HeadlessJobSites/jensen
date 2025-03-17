@@ -87,14 +87,15 @@ strong{
 }
 
 @media (max-width: 520px) {
-	/* .container,
-	.section-title,
+	.container {
+		
+	}
+}
+
+/* feature-item,
 	.video-container,
 	.feature-item,
-	.filters-container {
-		padding-inline: 0.5rem;
-	} */
-}
+	.filters-container */
 
 .section-container {
 	padding-block: var(--pc-section-padding);
