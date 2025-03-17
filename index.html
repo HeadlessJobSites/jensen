@@ -786,7 +786,7 @@
                 const selectedJobType = $('#jobTypeFilter').val();
                 filteredJobs = filteredJobs.filter(job => {
                     return (selectedCountry === 'All' || job.country === selectedCountry) &&
-                        (selectedJobType === 'All' || job.title === selectedJobType);
+                        (selectedJobType === 'All' || job.occupation_area === selectedJobType);
                 });
 
                 if (filteredJobs.length === 0) {
