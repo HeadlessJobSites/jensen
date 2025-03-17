@@ -163,6 +163,15 @@ strong{
 	margin-block-start: 1.125em;
 }
 
+@media (max-width: 450px) {
+	.activities-card {
+		padding-inline: 0.5rem;
+	}
+	.activities-card-content {
+		padding-inline: 0.6rem;
+	}
+}
+
 .activities-card-text {
 	margin-block-end: 0;
 }
