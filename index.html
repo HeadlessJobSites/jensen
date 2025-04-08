@@ -816,8 +816,9 @@
                     if (job.country) { // Check if job has a country
                         locationSet.add(job.country);
                     }
-                    if (job.organizations[0][1]) { // Check if job has a title
-                        jobTypeSet.add(job.organizations[0][1]);
+                    const orgName = job.organizations?.[0]?.nameorgunit;
+                    if (orgName) { // Check if job has a title
+                        jobTypeSet.add(orgName.trim());
                     }
                 });
 
@@ -855,8 +856,9 @@
                 const selectedCountry = $('#locationFilter').val();
                 const selectedJobType = $('#jobTypeFilter').val();
                 filteredJobs = filteredJobs.filter(job => {
+                    const orgName = job.organizations?.[0]?.nameorgunit;
                     return (selectedCountry === 'All' || job.country === selectedCountry) &&
-                        (selectedJobType === 'All' || job.organizations[0][1] === selectedJobType);
+                        (selectedJobType === 'All' || orgName === selectedJobType);
                 });
 
                 if (filteredJobs.length === 0) {
