@@ -856,12 +856,14 @@
                     $('#filtersContainer').show(); // Show filters if jobs exist
                 }
 
-                let filteredJobs = jobs.slice(0, displayedJobs); // Get the subset of jobs to be displayed
 
                 // Apply filters
                 const selectedCountry = $('#locationFilter').val();
                 const selectedJobType = $('#jobTypeFilter').val();
-                filteredJobs = filteredJobs.filter(job => {
+
+                // let filteredJobs = jobs.slice(0, displayedJobs); 
+
+                let filteredJobs = jobs.filter(job => {
                     const orgName = getOrganizationUnitName(job);
                     return (selectedCountry === 'All' || job.country === selectedCountry) &&
                         (selectedJobType === 'All' || orgName === selectedJobType);
@@ -874,12 +876,14 @@
                     return; // Exit the function early
                 }
 
+                const jobsToRender = filteredJobs.slice(0, displayedJobs);
+
                 // Add job cards to the DOM
-                filteredJobs.forEach(job => {
+                jobsToRender.forEach(job => {
                     $('#jobList').append(buildJobCard(job));
                 });
 
-                updateLoadMoreVisibility(); // Update the visibility of the "Load More" button
+                updateLoadMoreVisibility(filteredJobs.length); // Update the visibility of the "Load More" button
             }
 
 
@@ -909,8 +913,8 @@
             }
 
             // Function to update the visibility of the "Load More" button
-            function updateLoadMoreVisibility() {
-                if (displayedJobs >= jobs.length) {
+            function updateLoadMoreVisibility(filteredCount) {
+                if (displayedJobs >= filteredCount) {
                     $('#loadMore').hide();
                 } else {
                     $('#loadMore').show();
