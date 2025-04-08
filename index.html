@@ -808,7 +808,7 @@
 
             // Function to populate filter dropdowns based on jobs
             function populateFilters() {
-                const organizationUnitName = job.organizations.length > 1 ? job.organizations[1].nameorgunit : job.organizations[0]?.nameorgunit || 'Not specified';
+                // const organizationUnitName = job.organizations.length > 1 ? job.organizations[1].nameorgunit : job.organizations[0]?.nameorgunit || 'Not specified';
                 const locationSet = new Set();
                 const jobTypeSet = new Set();
 
@@ -816,8 +816,8 @@
                     if (job.country) { // Check if job has a country
                         locationSet.add(job.country);
                     }
-                    if (job.organizationUnitName) { // Check if job has a title
-                        jobTypeSet.add(job.organizationUnitName);
+                    if (job.organizations[0][1]) { // Check if job has a title
+                        jobTypeSet.add(job.organizations[0][1]);
                     }
                 });
 
@@ -856,7 +856,7 @@
                 const selectedJobType = $('#jobTypeFilter').val();
                 filteredJobs = filteredJobs.filter(job => {
                     return (selectedCountry === 'All' || job.country === selectedCountry) &&
-                        (selectedJobType === 'All' || job.organizationUnitName === selectedJobType);
+                        (selectedJobType === 'All' || job.organizations[0][1] === selectedJobType);
                 });
 
                 if (filteredJobs.length === 0) {
