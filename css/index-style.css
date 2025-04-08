@@ -723,32 +723,30 @@ strong{
 
 
 .more-text {
-	display: inline;
 	opacity: 0;
-	visibility: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
-}
+	transition: opacity 0.3s ease;
+	display: inline;
 
+}
 .more-text.visible {
 	opacity: 1;
-	visibility: visible;
 }
 
 
 .benefit-content {
     display: flex;
+		position: relative;
     flex-direction: column;
     justify-content: start;
     align-items: center;
     background-color: #f0f0f0;
     border-radius: 10px;
-    padding: 20px;
+    padding: 2rem;
     padding-top: 70px;
     width: 100%;
     height: 240px;
 		overflow: hidden;
-		transition: height 0.3s ease-in-out;
-		transition: background-color 0.3s ease-in-out;
+		transition: height 0.4s ease, background-color 0.3s ease;
 }
 
 /* .benefit-item.open .benefit-content {

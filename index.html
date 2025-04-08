@@ -510,7 +510,9 @@
                         </div>
                         <div class="benefit-content">
                             <strong>Ledarskap</strong>
-                            <p>Något vi brinner extra mycket för är studiero och uppförande samt en hög språklig nivå hos våra elever. <span class="more-text">Du som lärare ska också få vara ledaren i klassrummet. Det kompromissar vi aldrig med och våra erfarna skolledare backar alltid upp dig för att vi ska ha studier i fokus och en lugn och trivsam arbetsmiljö både för elever och för dig som lärare.</span></p>
+                            <p>Något vi brinner extra mycket för är studiero och uppförande samt en hög språklig nivå hos våra elever.
+                            <p class="more-text">Du som lärare ska också få vara ledaren i klassrummet. Det kompromissar vi aldrig med och våra erfarna skolledare backar alltid upp dig för att vi ska ha studier i fokus och en lugn och trivsam arbetsmiljö både för elever och för dig som lärare.</p>
+                            </p>
                         </div>
                     </div>
                     <!-- Benefit 2 -->
@@ -551,7 +553,7 @@
                     <!-- Benefit 5 -->
                     <div class="col-md-3 col-sm-4 benefit-item">
                         <div class="benefit-icon">
-                            <i class="fa-solid fa-pot-food"></i>
+                            <img src="./files/icon_medarbetare.png" alt="Benefit Icon">
                         </div>
                         <div class="benefit-content">
                             <strong>Är JENSEN arbetsplatsen för dig?</strong>
@@ -592,40 +594,54 @@
 
     <script>
         const benefitItems = document.querySelectorAll('.benefit-item');
+        const collapsedHeight = 240;
 
         benefitItems.forEach(item => {
-            item.addEventListener('click', (e) => {
-                const currentItem = e.currentTarget;
-                const content = currentItem.querySelector('.benefit-content');
-                const moreText = currentItem.querySelector('.more-text');
-                const introText = currentItem.querySelector('.intro-text');
-                const isOpen = currentItem.classList.contains('open');
+            const content = item.querySelector('.benefit-content');
+            const moreText = item.querySelector('.more-text');
+            const introText = item.querySelector('.intro-text');
 
+            item.addEventListener('click', () => {
+                const isOpen = item.classList.contains('open');
+
+                // closing cards
                 benefitItems.forEach(i => {
                     i.classList.remove('open');
                     const c = i.querySelector('.benefit-content');
                     const t = i.querySelector('.more-text');
                     const intro = i.querySelector('.intro-text');
 
-                    if (c) c.style.height = '240px';
+                    if (c) {
+                        // current height before collapsing
+                        c.style.height = c.scrollHeight + 'px';
+
+                        requestAnimationFrame(() => {
+                            c.style.height = collapsedHeight + 'px';
+                        });
+                    }
+
                     if (t) t.classList.remove('visible');
                     if (intro) intro.innerText = intro.innerText.replace(/,$/, '');
                 });
 
-                if (!isOpen) {
-                    currentItem.classList.add('open');
-                    content.style.height = '240px';
+                // if card clicked again - close
+                if (isOpen) return;
 
-                    requestAnimationFrame(() => {
-                        const fullHeight = content.scrollHeight;
-                        content.style.height = fullHeight + 'px';
+                // open current card
+                item.classList.add('open');
 
-                        if (moreText) moreText.classList.add('visible');
-                        if (introText && !introText.innerText.endsWith(',')) {
-                            introText.innerText = introText.innerText.trim() + ',';
-                        }
-                    });
-                }
+                // set initial height
+                content.style.height = collapsedHeight + 'px';
+
+                requestAnimationFrame(() => {
+                    const fullHeight = content.scrollHeight;
+                    content.style.height = fullHeight + 'px';
+
+                    if (moreText) moreText.classList.add('visible');
+                    if (introText && !introText.innerText.endsWith(',')) {
+                        introText.innerText = introText.innerText.trim() + ',';
+                    }
+                });
             });
         });
 
