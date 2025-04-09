@@ -16,7 +16,7 @@
     <script src="https://kit.fontawesome.com/ca38a06270.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="https://widget.gobistories.com/gwi/6" async onload="gobi.discover()"></script>
+    <script src="https://widget.gobistories.com/gwi/6" async defer></script>
 
 
     <meta property="og:title" content="JENSEN education karriärportal">
@@ -1108,14 +1108,21 @@
             });
         });
     </script>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            if (window.gobi) {
+            if (window.gobi && typeof gobi.discover === 'function') {
                 gobi.discover();
+            } else {
+                const interval = setInterval(() => {
+                    if (window.gobi && typeof gobi.discover === 'function') {
+                        gobi.discover();
+                        clearInterval(interval);
+                    }
+                }, 200);
             }
         });
     </script>
-
 
 
 </body>
