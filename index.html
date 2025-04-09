@@ -16,7 +16,7 @@
     <script src="https://kit.fontawesome.com/ca38a06270.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="https://widget.gobistories.com/gwi/6" async defer></script>
+    <script src="https://widget.gobistories.com/gwi/6" async onload="gobi.discover()"></script>
 
 
     <meta property="og:title" content="JENSEN education karriärportal">
@@ -335,7 +335,7 @@
             <h2 class="section-title process-section-title"><span class="title-alt">Rekryterings&shy;process</span></h2>
             <div class="row">
 
-                <div class="col-md-4 col-sm-4 process-item process-item-video hide-on-pc">
+                <div class="col-md-4 col-sm-4 process-item process-item-video">
                     <div class="process-content no-background gobi-video-item">
                         <script src="https://widget.gobistories.com/gwi/6" async onload="gobi.discover()"></script>
 
@@ -346,13 +346,13 @@
                 <!-- Existing Content in Right Column -->
                 <div class="col-md-12">
                     <div class="row process-row">
-                        <div class="col-md-4 col-sm-4 process-item process-item-video hide-on-mobile">
+                        <!-- <div class="col-md-4 col-sm-4 process-item process-item-video hide-on-mobile">
                             <div class="process-content no-background">
                                 <script src="https://widget.gobistories.com/gwi/6" async onload="gobi.discover()"></script>
 
                                 <div class="gobi-collection" data-gobi-collection-id="4uapw"></div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- Benefit 1 -->
                         <div class="col-md-4 col-sm-4 process-item">
                             <div class="process-icon">
@@ -1109,20 +1109,6 @@
         });
     </script>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            if (window.gobi && typeof gobi.discover === 'function') {
-                gobi.discover();
-            } else {
-                const interval = setInterval(() => {
-                    if (window.gobi && typeof gobi.discover === 'function') {
-                        gobi.discover();
-                        clearInterval(interval);
-                    }
-                }, 200);
-            }
-        });
-    </script>
 
 
 </body>
