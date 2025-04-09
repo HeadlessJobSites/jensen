@@ -170,7 +170,7 @@ strong{
 	background-color: var(--light-bkg-color);
 	overflow: hidden;
 	border-radius: 10px;
-	transition: background-color .2s;
+	transition: background-color .2s ease;
 	cursor: pointer;
 }
 
@@ -180,9 +180,17 @@ strong{
 	}
 }
 
-.activities-card:hover {
+@media (hover: hover) {
+  .activities-card:hover {
+    background-color: var(--card-hover-color);
+    transition: background-color 0.2s ease;
+  }
+}
+
+.activities-card:active {
 	background-color: var(--card-hover-color);
 }
+
 
 .activities-card-image {
 	width: 100%;
