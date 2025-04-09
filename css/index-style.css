@@ -660,6 +660,13 @@ strong{
 	flex-wrap: wrap;
 	justify-content: center;
 }
+
+@media (max-width: 768px) {
+	.benefits-section .row {
+		justify-content: left;
+	}
+}
+
 .benefit-item {
 	display: flex;
 	flex-direction: column;
@@ -710,8 +717,14 @@ strong{
 	/* font-size: 1.4rem; */
 }
 
-.benefit-item:hover .benefit-content {
+.benefit-item.open .benefit-content {
   background-color: rgb(222, 222, 222);
+}
+
+@media (hover: hover) {
+	.benefit-item:hover .benefit-content {
+		background-color: rgb(222, 222, 222);
+	}
 }
 
 .more-text-btn {
