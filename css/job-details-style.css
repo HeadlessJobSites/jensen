@@ -615,7 +615,8 @@ a:hover {
 }
 }
 #inner-job-title {
-    font-size: 3rem;
+	font-family: var(--headings-font);
+    font-size: 2.3rem;
     line-height: 1.6;
 }
 
@@ -636,6 +637,7 @@ a:hover {
 
 .job-title2 {
   padding-inline: 1rem;
+	margin-block-end: 1.5rem;
 }
 
 #jobTitle {

@@ -606,6 +606,13 @@
                 updateLoadMoreVisibility(); // Update button visibility after resize
             });
 
+            // Oragnization name for filter (job type)
+            function getOrganizationUnitName(job) {
+                return job.organizations?.length > 1
+                    ? job.organizations[1]?.nameorgunit
+                    : job.organizations?.[0]?.nameorgunit || 'Not specified';
+            }
+
             // Function to populate filter dropdowns based on jobs
             function populateFilters() {
                 const locationSet = new Set();
@@ -615,8 +622,9 @@
                     if (job.country) { // Check if job has a country
                         locationSet.add(job.country);
                     }
-                    if (job.occupation_area) { // Check if job has a title
-                        jobTypeSet.add(job.occupation_area);
+                    const orgName = getOrganizationUnitName(job);
+                    if (orgName && orgName !== 'Not specified') { // Check if job has a title
+                        jobTypeSet.add(orgName.trim());
                     }
                 });
 
@@ -638,22 +646,23 @@
             function displayJobs() {
                 $('#jobList').empty(); // Clear current jobs
 
-                let filteredJobs = jobs.slice(0, displayedJobs); // Get the subset of jobs to be displayed
-
                 // Apply filters
                 const selectedCountry = $('#locationFilter').val();
                 const selectedJobType = $('#jobTypeFilter').val();
-                filteredJobs = filteredJobs.filter(job => {
+                let filteredJobs = jobs.filter(job => {
+                    const orgName = getOrganizationUnitName(job);
                     return (selectedCountry === 'All' || job.country === selectedCountry) &&
-                        (selectedJobType === 'All' || job.occupation_area === selectedJobType);
+                        (selectedJobType === 'All' || orgName === selectedJobType);
                 });
 
+                const jobsToRender = filteredJobs.slice(0, displayedJobs);
+
                 // Add job cards to the DOM
-                filteredJobs.forEach(job => {
+                jobsToRender.forEach(job => {
                     $('#jobList').append(buildJobCard(job));
                 });
 
-                updateLoadMoreVisibility(); // Update the visibility of the "Load More" button
+                updateLoadMoreVisibility(filteredJobs.length); // Update the visibility of the "Load More" button
             }
 
             // Function to build HTML for a job card
