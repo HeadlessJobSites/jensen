@@ -632,6 +632,16 @@ background-color: rgba(0, 33, 66, 0.55);
 	font-size: 5rem;
 }
 
+@media (max-width: 460px) {
+	.icon-wrapper {
+		width: 11rem;
+		height: 11rem;
+	}
+	.quote-icon {
+		font-size: 4rem;
+	}
+}
+
 .quote-inner {
 	display: flex;
 	gap: 4rem;
