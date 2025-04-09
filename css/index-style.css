@@ -463,12 +463,17 @@ background-color: rgba(0, 33, 66, 0.65);
 	display: block;
 }
 
+.navbar-brand img {
+	height: 70px;
+}
+
+
 @media (max-width: 768px) {
 .intro-header {
 	font-size: 2.3em !important;
 }
 .navbar-brand img {
-    height: 25px;
+    height: 40px;
 }
     .blockquote p {
         font-size: 20px !important;
@@ -1256,10 +1261,6 @@ font-size: 1.8rem;
 }
 
 /* Navigation */
-
-.navbar-brand img {
-	height: 70px;
-}
 
 .nav-link {
 	font-size: var(--text-font-size);
