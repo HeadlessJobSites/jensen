@@ -261,20 +261,20 @@ strong{
 	position: relative;
 	height: 100vh;
 	overflow: hidden;
-/* background-color: rgb(0,0,0,0.62); */
+background-color: rgba(0, 33, 66, 0.65);
 }
 
 /* Hero section */
-.hero-section::before {
+/* .hero-section::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 33, 66, 0.6); /* Overlay color */
+    background: rgba(0, 33, 66, 0.65); 
     z-index: 1;
-}
+} */
 
 .hero-video, .hero-image {
     position: absolute;
