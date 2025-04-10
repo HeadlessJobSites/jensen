@@ -816,11 +816,18 @@
 
             // Adjust jobsToShow based on window resize
             $(window).resize(function () {
+                const previousJobsToShow = jobsToShow;
                 jobsToShow = window.innerWidth > 768 ? jobsToShowDesktop : jobsToShowMobile;
-                displayedJobs = Math.min(jobsToShow, jobs.length); // Adjust displayedJobs based on new jobsToShow
-                displayJobs(); // Redisplay jobs based on new size
-                updateLoadMoreVisibility(); // Update button visibility after resize
+
+                // Только если пользователь ничего не нажимал, адаптировать displayedJobs
+                if (displayedJobs <= previousJobsToShow) {
+                    displayedJobs = jobsToShow;
+                }
+
+                displayJobs();
+                updateLoadMoreVisibility();
             });
+
 
             // Oragnization name for filter (job type)
             function getOrganizationUnitName(job) {
