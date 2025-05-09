@@ -1294,7 +1294,7 @@ font-size: 1.8rem;
     margin-top: 0px; /* Space between the widget and the text */
     font-size: 13px; /* Small text size */
     width: fit-content; /* Adjust width based on content */
-    background-color: var(--dark-bkg-color) !important;
+    background-color: var(--accent-color) !important;
     padding: 11px !important;
     color: var(--white-text-color) !important;
     font-weight: 700 !important;
@@ -1312,10 +1312,10 @@ font-size: 1.8rem;
 	  background: transparent;
     border: none; /* No border */
     border-radius: 2px; /* Slightly rounded corners */
-    color: var(--dark-bkg-color) !important;
+    color: var(--accent-color) !important;
   }
   .close-btn i{
-    color: var(--dark-bkg-color) !important;
+    color: var(--accent-color) !important;
     font-size: 20px;
 
   }
