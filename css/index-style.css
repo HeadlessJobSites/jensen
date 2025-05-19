@@ -686,7 +686,7 @@ background-color: rgba(0, 33, 66, 0.55);
 
 .quote-title {
 	font-size: var(--text-font-size);
-	font-weight: 800;
+	font-weight: 600;
 }
 
 .icon-wrapper {
@@ -740,7 +740,7 @@ background-color: rgba(0, 33, 66, 0.55);
 
 .blockquote p {
 	font-size: 40px;
-	font-weight: 800;
+	font-weight: 600;
 	line-height: 1.5;
 }
 .blockquote-footer {
@@ -1013,7 +1013,7 @@ background-color: rgba(0, 33, 66, 0.55);
 }
 .job-description h3,.job-description h4,.job-description h5,.job-description h6,.job-description h2 {
 	font-size: 1.1rem;
-	font-weight: 800;
+	font-weight: 500;
 }
 .job-description p {
 	text-align: left !important;
@@ -1119,7 +1119,7 @@ background-color: rgba(0, 33, 66, 0.55);
 	}
 }
 strong {
-	font-weight: 800;
+	font-weight: 600;
 }
 a:hover {
 	color: #0056b3;
@@ -1157,7 +1157,7 @@ a:hover {
 	padding: 1.75rem;
 }
 #loadMore {
-	font-weight: 800;
+	font-weight: 600;
 }
 .bg-dark {
 	background-color: var(--dark-bkg-color) !important;
@@ -1185,7 +1185,7 @@ a:hover {
     line-height: 1.6;
 }
 #jobTitle {
-	font-weight: 800;
+	font-weight: 600;
 }
 .job-section {
 	background-color: #f8f9fa;
@@ -1195,7 +1195,7 @@ a:hover {
 	margin-bottom: 15px;
 }
 .job-info-title {
-	font-weight: 800;
+	font-weight: 600;
 	display: block;
 }
 .apply-btn {
