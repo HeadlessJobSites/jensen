@@ -106,7 +106,12 @@ h1 {
 
 h2 {
 	font-family: var(--headings-font),-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-	font-weight: 400;
+	font-weight: 500;
+}
+
+h3 {
+	font-family: var(--headings-font),-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+	font-weight: 500;
 }
 
 p,
@@ -366,7 +371,7 @@ background-color: rgba(0, 33, 66, 0.55);
 
 .feature-item-title {
 	font-family: var(--headings-font);
-	font-weight: 700;
+	font-weight: 500;
 }
 
 #position-title {
