@@ -950,7 +950,7 @@ background-color: rgba(0, 33, 66, 0.55);
 .process-section .row {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: start;
 }
 .process-item {
 	display: flex;
@@ -985,7 +985,9 @@ background-color: rgba(0, 33, 66, 0.55);
 	padding: 1.5rem;
 	padding-top: 50px;
 	width: 100%;
-	min-height: 340px;
+   	min-height: 350px;
+   	font-size: 0.9em;
+    	line-height: 1.4em;
 }
 
 .process-icon {
