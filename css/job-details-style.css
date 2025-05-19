@@ -11,8 +11,8 @@
 	--card-hover-color: #e5eaef;
 
 	/* Fonts */
-	--headings-font: 'Cardo', serif;
-	--body-font: 'Lato', sans-serif;
+	--headings-font: 'TiemposFine', serif;
+	--body-font: 'TiemposText', sans-serif;
 	--lg-title-font-size: 3.5rem;
 	--m-title-font-size: 2.625rem;
 	--text-font-size: 1.125em;
@@ -31,6 +31,77 @@
 }
 
 /* Fonts */
+
+@font-face {
+	font-family: 'TiemposFine';
+	src: url('../fonts/TiemposFine-Medium.otf');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: TiemposFine';
+	src: url('../fonts/TiemposFine-MediumItalic.otf');
+	font-weight: 500;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: TiemposText';
+	src: url('../fonts/TiemposText-Regular.otf');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: TiemposText';
+	src: url('../fonts/TiemposText-RegularItalic.otf');
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: TiemposText';
+	src: url('../fonts/TiemposText-Medium.otf');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: TiemposText';
+	src: url('../fonts/TiemposText-MediumItalic.otf');
+	font-weight: 500;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: TiemposText';
+	src: url('../fonts/TiemposText-Semibold.otf');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: TiemposText';
+	src: url('../fonts/TiemposText-SemiboldItalic.otf');
+	font-weight: 600;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: TiemposText';
+	src: url('../fonts/TiemposText-Bold.otf');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: TiemposText';
+	src: url('../fonts/TiemposText-BoldItalic.otf');
+	font-weight: 700;
+	font-style: italic;
+	font-display: swap;
+}
 
 @font-face {
 	font-family: 'Cardo';
@@ -317,7 +388,7 @@
 }
 .blockquote p {
 	font-size: 40px;
-	font-weight: 800;
+	font-weight: 600;
 	line-height: 1.5;
 }
 .blockquote-footer {
@@ -443,7 +514,7 @@
 .process-icon p, .process-icon h3 {
 	font-size: 4.5rem;
 	position: absolute;
-	font-weight: 700;
+	font-weight: 500;
 }
 .process-icon img {
 	width: 25px;
@@ -454,7 +525,7 @@
 }
 .job-description h3,.job-description h4,.job-description h5,.job-description h6,.job-description h2 {
 	font-size: 1.1rem;
-	font-weight: 800;
+	font-weight: 600;
 }
 .job-description p {
 	text-align: left !important;
@@ -554,7 +625,7 @@
 	}
 }
 strong {
-	font-weight: 800;
+	font-weight: 600;
 }
 a:hover {
 	color: #0056b3;
@@ -590,7 +661,7 @@ a:hover {
 	padding: 1.75rem;
 }
 #loadMore {
-	font-weight: 800;
+	font-weight: 600;
 }
 @media (max-width: 991.98px) {
 	.background-image {
@@ -639,7 +710,7 @@ a:hover {
 }
 
 #jobTitle {
-	font-weight: 800;
+	font-weight: 600;
 }
 .job-section {
 	background-color: #f8f9fa;
@@ -649,7 +720,7 @@ a:hover {
 	margin-bottom: 15px;
 }
 .job-info-title {
-	font-weight: 800;
+	font-weight: 600;
 	display: block;
 }
 /* .apply-btn {
