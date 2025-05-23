@@ -1460,6 +1460,9 @@ animation: fadeIn 2s;
 a.nav-link.btn.btn-primary.apply-btn {  
         font-size: 1em !important;
 }
+.navbar .navbar-brand--center {
+    top: 10px;
+}
 }
 .navbar.bg-dark .nav-link.apply-btn {  
         font-size: 1em;
