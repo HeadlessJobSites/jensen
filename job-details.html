@@ -120,42 +120,83 @@
     </script>
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
-        <div class="container m-py-1">
-            <a class="navbar-brand" href="./" aria-label="Home">
-                <img src="./files/logo_jensen_vit.png" class="d-inline-block align-top" alt="JENSEN education logo">
-            </a>
-            <div class="d-flex justify-content-end align-items-center flex-grow-1">
-                <a class="nav-link ml-auto d-lg-none btn btn-primary apply-btn btn-light-border m-mr-2" href="#appform-header">Ansök</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-            <div class="d-flex d-lg-none mt-2 mobile-only">
-                <!-- <a class="nav-link new-link mr-1" href="#tt-talentech-section-2">Møt teamet <i class="fa-thin fa-arrow-down"></i></a> -->
-                <a class="nav-link new-link ml-1" href="#process">Rekrutteringsprosess <i class="fa-thin fa-arrow-down"></i></a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="./">Hem <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#appform-header">Ansök</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="#tt-talentech-section-2">Träffa teamet</a>
-                    </li> -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="#process">Rekryteringsprocess</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" target="blank" href="https://www.jenseneducation.se/">jenseneducation.se<span class="sr-only">(current)</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container position-relative">
+
+    <!-- 1) MOBILE TOGGLER & MOBILE “ANSÖK” BUTTON -->
+    <div class="d-flex justify-content-end align-items-center w-100">
+      <a
+        href="#appform-header"
+        class="nav-link btn btn-primary apply-btn btn-light-border d-lg-none mr-2"
+      >
+        Ansök
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+
+    <!-- 2) COLLAPSED LINKS (desktop & mobile) -->
+    <div
+      class="collapse navbar-collapse justify-content-center"
+      id="navbarNav"
+    >
+      <!-- left side -->
+      <ul class="navbar-nav mr-5 m-mr-0">
+        <li class="nav-item">
+          <a class="nav-link" href="./">Hem</a>
+        </li>
+        <!-- show this in the collapsed menu on mobile, too -->
+        <li class="nav-item d-lg-none">
+          <a
+            class="nav-link btn btn-primary apply-btn btn-light-border mb-2"
+            href="#appform-header"
+          >
+            Ansök
+          </a>
+        </li>
+      </ul>
+
+      <!-- right side -->
+      <ul class="navbar-nav ml-5 m-ml-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#process">Rekryteringsprocess</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            target="_blank"
+            href="https://www.jenseneducation.se/"
+          >
+            jenseneducation.se
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 3) CENTERED LOGO -->
+    <a
+      class="navbar-brand navbar-brand--center"
+      href="./"
+      aria-label="Home"
+    >
+      <img
+        src="./files/logo_jensen_vit.png"
+        class="d-inline-block align-top"
+        alt="JENSEN education logo"
+      >
+    </a>
+  </div>
+</nav>
+
 <!--
     <script>
         $(document).ready(function () {
