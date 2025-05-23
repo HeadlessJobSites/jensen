@@ -857,9 +857,6 @@ font-size: 1.8rem;
 .navbar-dark .navbar-nav .active>.nav-link {
     font-weight: 500;
 }
-.navbar-dark .navbar-nav .nav-link {
-    color: rgba(255, 255, 255);
-}
 /* .process-section .process-content h3 {
     font-size: 1rem;
     font-weight: 700;
@@ -892,21 +889,12 @@ a.nav-link.btn.btn-primary.apply-btn {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
-.navbar.bg-dark .container {
-    padding: 0;
-}
    .navbar.bg-dark .navbar-nav {
         background: transparent;
         padding-left: 15px;
         padding-right: 15px;
         /*margin: 0 auto;*/
     }
-@media (min-width: 992px) {
-    .navbar-expand-lg .navbar-nav .nav-link {
-        padding-right: 1rem;
-        padding-left: 1rem;
-    }
-}
 .share-container a {
 	text-decoration: none !important;
 }
