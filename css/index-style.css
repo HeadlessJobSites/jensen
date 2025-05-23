@@ -1442,7 +1442,7 @@ font-size: 1.8rem;
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color: rgba(255, 255, 255);
+    color: #cfad5d;
 }
 	    
 @media (min-width: 992px) {
