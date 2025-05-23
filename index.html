@@ -45,10 +45,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="./#jobs-anchor">Jobb</a>
+                        <a class="nav-link" href="./#jobs-anchor">Lediga tjänster</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./#feature-section">Träffa de anställda</a>
+                        <a class="nav-link" href="./#feature-section">Våra medarbetare</a>
                     </li>
                     <!-- <li class="nav-item">
                         <a class="nav-link" href="./#meet-the-team">Träffa de anställda</a>
@@ -57,7 +57,7 @@
                         <a class="nav-link" href="./#process">Rekryteringsprocess</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" target="blank" href="https://www.jenseneducation.se/">jenseneducation.se<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" target="blank" href="https://www.jenseneducation.se/">Om JENSEN<span class="sr-only">(current)</span></a>
                     </li>
                 </ul>
             </div>
@@ -94,7 +94,7 @@
         </video>
         <div class="hero-content">
             <h1><span>Ta nästa steg i din karriär - sök till oss!</span></h1>
-            <a href="#jobs-anchor" class="btn btn-primary btn-lg"><span class="btn-arrow"><strong>Se lediga tjänster</strong></span></a>
+            <a href="#jobs-anchor" class="btn btn-primary btn-lg"><span class="btn-arrow">Se lediga tjänster</span></a>
         </div>
     </section>
 
@@ -106,12 +106,12 @@
                 .then(jobs => {
                     const positionsCount = jobs.length; // Get the count of jobs from the feed
                     const btnText = positionsCount === 1 ? 'Se 1 ledig tjänst' : `Se ${positionsCount} lediga tjänster`; // Update button text based on count
-                    document.querySelector('a.btn.btn-primary.btn-lg strong').textContent = positionsCount > 0 ? btnText : 'Se lediga tjänster';
+                    document.querySelector('a.btn.btn-primary.btn-lg').textContent = positionsCount > 0 ? btnText : 'Se lediga tjänster';
                 })
                 .catch(error => {
                     console.error('Error fetching job details:', error);
                     // If there is an error fetching the jobs, show default text
-                    document.querySelector('a.btn.btn-primary.btn-lg strong').textContent = 'Se lediga tjänster';
+                    document.querySelector('a.btn.btn-primary.btn-lg').textContent = 'Se lediga tjänster';
                 });
         });
     </script>
@@ -178,9 +178,9 @@
                     <a class="activities-card-link" href="https://www.jensengymnasium.se/" target="_blank"></a>
                 </div>
                 <div class="activities-card">
-                    <img class="activities-card-image" src="./files/Komvux.jpg" alt="Komvux/SFI">
+                    <img class="activities-card-image" src="./files/Komvux.jpg" alt="Komvux">
                     <div class="activities-card-content">
-                        <h3 class="activities-card-title">Komvux/SFI</h3>
+                        <h3 class="activities-card-title">Komvux</h3>
                         <p class="activities-card-text">Vi är störst i Stockholm inom gymnasial vuxenutbildning. Vi utbildar även inom SFI.<i> Läs mer</i></p>
                     </div>
                     <a class="activities-card-link" href="https://www.jensenkomvux.se/" target="_blank"></a>
@@ -194,9 +194,9 @@
                     <a class="activities-card-link" href="https://www.jensenyh.se/" target="_blank"></a>
                 </div>
                 <div class="activities-card">
-                    <img class="activities-card-image" src="./files/HK.jpg" alt="JENSEN education/HK">
+                    <img class="activities-card-image" src="./files/HK.jpg" alt="Huvudkontoret">
                     <div class="activities-card-content">
-                        <h3 class="activities-card-title">JENSEN education / HK</h3>
+                        <h3 class="activities-card-title">Huvudkontoret / staberna</h3>
                         <p class="activities-card-text">På vårt huvudkontor i Gamla stan jobbar våra staber inom Ekonomi, Fastighet, Inköp, HR/Lön, Marknad, IT samt Kvalitet- och utveckling. Vi har även flera underbolag: JENSEN facility, interiors & promotion, kitchen, security och stables.<i> Läs mer</i></p>
                     </div>
                     <a class="activities-card-link" href="https://www.jenseneducation.se/" target="_blank"></a>
@@ -721,7 +721,7 @@
                     <p>Prenumerera på tjänster så får du ett mail när det finns en ledig tjänst som matchar dina preferenser.</p>
                 </div>
             </div>
-            <button id="agent" class="mt-3 btn btn-primary" style="font-weight:600">Registrera dig</button>
+            <button id="agent" class="mt-3 btn btn-primary" style="">Registrera dig</button>
             <div class="modal fade modal-fullscreen-90w" id="exampleModal" tabindex="-1" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
