@@ -555,7 +555,7 @@ background-color: rgba(0, 33, 66, 0.55);
 }
 
 .navbar-brand img {
-	height: 70px;
+	height: 60px;
 }
 
 
@@ -1469,7 +1469,7 @@ a.nav-link.btn.btn-primary.apply-btn {
   100% { opacity: 1; }
 }
 .navbar.bg-dark .container {
-    padding: 0;
+    padding: 20px 0;
 }
    .navbar.bg-dark .navbar-nav {
         background: transparent;
