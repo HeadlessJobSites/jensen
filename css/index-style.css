@@ -184,6 +184,12 @@ strong{
 	font-size: var(--m-title-font-size);
 	padding-block-end: var(--section-title-padding);
 }
+.navbar .navbar-brand--center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 
 @media (max-width: 820px) {
 	.section-title {
