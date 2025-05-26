@@ -356,11 +356,11 @@ strong{
 	position: relative;
 	height: 100vh;
 	overflow: hidden;
-/*background-color: rgba(0, 33, 66, 0.55);*/
+background-color: rgba(0, 33, 66, 0.55);
 }
 
 /* Hero section */
- .hero-section::before {
+/* .hero-section::before {
     content: "";
     position: absolute;
     top: 0;
@@ -369,7 +369,7 @@ strong{
     height: 100%;
     background: rgba(0, 33, 66, 0.65); 
     z-index: 1;
-} 
+} */
 
 .hero-video, .hero-image {
     position: absolute;
@@ -380,24 +380,30 @@ strong{
     width: auto;
     height: auto;
     transform: translate(-50%, -50%);
-   /* z-index: -1; */ /* Ensures the background is below the overlay */
+    z-index: -1; /* Ensures the background is below the overlay */
 }
 
+/*
 .hero-video {
-  position:absolute;
-  top:50%; left:50%;
-  min-width:100%; min-height:100%;
-  transform:translate(-50%,-50%);
-  z-index: 0;    
-}
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+	background-color: #2b2940;
+}*/
 
 .hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  top: 50%;
-  transform: translateY(-50%);
-  color: white;
+	position: relative;
+	text-align: center;
+	top: 50%;
+	transform: translateY(-50%);
+	color: white;
+    	z-index: 2;
 }
 
 /* Jobs list  */
@@ -1244,10 +1250,14 @@ a:hover {
 		padding: 8px 16px;
 	}
 	.hero-video {
-    top:0; left:0;
-    width:100%; height:100%;
-    transform: translate(0,0);
-    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translate(0, 0); /* Remove translate as it's no longer needed */
+    object-fit: cover; /* This will ensure the video covers the area without being cropped */
+    z-index: -1;
 }
 
 .m-m-0{margin:0!important}.m-mt-0,.m-my-0{margin-top:0!important}.m-mr-0,.m-mx-0{margin-right:0!important}.m-mb-0,.m-my-0{margin-bottom:0!important}.m-ml-0,.m-mx-0{margin-left:0!important}.m-m-1{margin:.25rem!important}.m-mt-1,.m-my-1{margin-top:.25rem!important}.m-mr-1,.m-mx-1{margin-right:.25rem!important}.m-mb-1,.m-my-1{margin-bottom:.25rem!important}.m-ml-1,.m-mx-1{margin-left:.25rem!important}.m-m-2{margin:.5rem!important}.m-mt-2,.m-my-2{margin-top:.5rem!important}.m-mr-2,.m-mx-2{margin-right:.5rem!important}.m-mb-2,.m-my-2{margin-bottom:.5rem!important}.m-ml-2,.m-mx-2{margin-left:.5rem!important}.m-m-3{margin:1rem!important}.m-mt-3,.m-my-3{margin-top:1rem!important}.m-mr-3,.m-mx-3{margin-right:1rem!important}.m-mb-3,.m-my-3{margin-bottom:1rem!important}.m-ml-3,.m-mx-3{margin-left:1rem!important}.m-m-4{margin:1.5rem!important}.m-mt-4,.m-my-4{margin-top:1.5rem!important}.m-mr-4,.m-mx-4{margin-right:1.5rem!important}.m-mb-4,.m-my-4{margin-bottom:1.5rem!important}.m-ml-4,.m-mx-4{margin-left:1.5rem!important}.m-m-5{margin:3rem!important}.m-mt-5,.m-my-5{margin-top:3rem!important}.m-mr-5,.m-mx-5{margin-right:3rem!important}.m-mb-5,.m-my-5{margin-bottom:3rem!important}.m-ml-5,.m-mx-5{margin-left:3rem!important}
@@ -1534,3 +1544,5 @@ a.nav-link.new-link {
 		display: none;
 	}
 }
+
+
