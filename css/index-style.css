@@ -1552,8 +1552,9 @@ a.nav-link.new-link {
     position: relative;             /* make it a containing block */
     background-image: url("../files/Bakgrundsbild-mobil_1080x1920.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     background-repeat: no-repeat;
+    padding-top: 56px;
   }
 
   /* overlay pseudo-element */
