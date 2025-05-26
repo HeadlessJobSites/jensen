@@ -1554,8 +1554,8 @@ a.nav-link.new-link {
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
-    padding-top: 56px;
-  }
+        margin-top: 70px;
+    }
 
   /* overlay pseudo-element */
   .hero-section::before {
