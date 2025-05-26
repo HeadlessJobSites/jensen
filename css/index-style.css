@@ -1545,16 +1545,36 @@ a.nav-link.new-link {
 	}
 }
 
-@media (max-width: 768px) {
-  .hero-video,
-  .hero-image {
-    display: none;            /* hide the video on small screens */
-  }
 
+
+@media (max-width: 768px) {
   .hero-section {
-    background-image: url("./files/Bakgrundsbild-mobil_1080x1920.jpg");
+    position: relative;             /* make it a containing block */
+    background-image: url("../files/Bakgrundsbild-mobil_1080x1920.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
+
+  /* overlay pseudo-element */
+  .hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 33, 66, 0.55);  /* your blue tint */
+    z-index: 1;
+  }
+
+  /* ensure your text/content sits on top */
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* hide the video entirely */
+  .hero-video,
+  .hero-image {
+    display: none !important;
+  }
 }
+
