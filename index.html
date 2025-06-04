@@ -103,8 +103,21 @@
 
     <section class="hero-section">
 	  <video playsinline autoplay loop muted class="hero-video">
+    <!-- Mobile (viewport ≤ 768px) -->
+    <source
+      media="(max-width: 768px)"
+      src="./files/V3-toppfilm-mobil.mov"
+      type="video/quicktime"
+    >
+    <!-- Desktop (viewport ≥ 769px) -->
+    <source
+      media="(min-width: 769px)"
+      src="./files/V3-toppfilm.mp4"
+      type="video/mp4"
+    >
+    <!-- Fallback if media queries aren’t honored -->
 	    <source
-	      src="./files/Toppfilm-v3.mp4"
+	      src="./files/V3-toppfilm.mp4"
 	      type="video/mp4"
 	    >
 	    Your browser does not support the video tag.
