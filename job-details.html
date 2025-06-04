@@ -216,9 +216,26 @@
     </script>
 -->
     <div class="hero-section">
-        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" class="hero-video">
-            <source src="./files/Toppfilm-v2-3.mp4" type="video/mp4">
-        </video>
+    	  <video playsinline autoplay loop muted class="hero-video">
+        <!-- Mobile (viewport ≤ 768px) -->
+        <source
+          media="(max-width: 768px)"
+          src="./files/V3-toppfilm-mobil.mov"
+          type="video/quicktime"
+        >
+        <!-- Desktop (viewport ≥ 769px) -->
+        <source
+          media="(min-width: 769px)"
+          src="./files/V3-toppfilm.mp4"
+          type="video/mp4"
+        >
+        <!-- Fallback if media queries aren’t honored -->
+    	    <source
+    	      src="./files/V3-toppfilm.mp4"
+    	      type="video/mp4"
+    	    >
+    	    Your browser does not support the video tag.
+    	  </video>
         <div class="hero-content">
             <div class="job-title2 container mx-auto" id="position-title"></div>
             <p id="position-title-meta" style="font-size: 1.25rem;"><span class="organization-unit"> </span> • <span class="city"> </span></p>
