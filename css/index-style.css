@@ -1550,7 +1550,7 @@ a.nav-link.new-link {
 @media (max-width: 768px) {
   .hero-section {
     position: relative;             /* make it a containing block */
-    background-image: url("../files/Bakgrundsbild-mobil_1080x1920.jpg");
+/*    background-image: url("../files/Bakgrundsbild-mobil_1080x1920.jpg");*/
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
@@ -1573,9 +1573,9 @@ a.nav-link.new-link {
   }
 
   /* hide the video entirely */
-  .hero-video,
+  /*.hero-video,
   .hero-image {
     display: none !important;
-  }
+  }*/
 }
 
