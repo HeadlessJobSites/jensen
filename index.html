@@ -843,15 +843,24 @@
             });
 
             function getFilteredJobs() {
-                const selectedCountry = $('#locationFilter').val();
-                const selectedJobType = $('#jobTypeFilter').val();
+			    const selectedLocation = $('#locationFilter').val();
+			    const selectedJobType = $('#jobTypeFilter').val();
+			
+			    return jobs.filter(job => {
+			        const orgName = getOrganizationUnitName(job);
+			        const location = getJobLocation(job);
+			
+			        return (selectedLocation === 'All' || location === selectedLocation) &&
+			            (selectedJobType === 'All' || orgName === selectedJobType);
+			    });
+			}
 
-                return jobs.filter(job => {
-                    const orgName = getOrganizationUnitName(job);
-                    return (selectedCountry === 'All' || job.country === selectedCountry) &&
-                        (selectedJobType === 'All' || orgName === selectedJobType);
-                });
-            }
+			function getJobLocation(job) {
+			    if (job.areas && job.areas.length > 0) {
+			        return job.areas[job.areas.length - 1].name;
+			    }
+			    return job.country || 'Not specified';
+			}
 
             function getOrganizationUnitName(job) {
                 return job.organizations?.length > 1
@@ -859,26 +868,28 @@
                     : job.organizations?.[0]?.nameorgunit || 'Not specified';
             }
 
-            function populateFilters() {
-                const locationSet = new Set();
-                const jobTypeSet = new Set();
-
-                jobs.forEach(job => {
-                    if (job.country) locationSet.add(job.country);
-                    const orgName = getOrganizationUnitName(job);
-                    if (orgName && orgName !== 'Not specified') jobTypeSet.add(orgName.trim());
-                });
-
-                $('#locationFilter').html('<option value="All">Alla platser</option>');
-                locationSet.forEach(country => {
-                    $('#locationFilter').append(`<option value="${country}">${country}</option>`);
-                });
-
-                $('#jobTypeFilter').html('<option value="All">Alla verksamhetsområden</option>');
-                jobTypeSet.forEach(type => {
-                    $('#jobTypeFilter').append(`<option value="${type}">${type}</option>`);
-                });
-            }
+			function populateFilters() {
+			    const locationSet = new Set();
+			    const jobTypeSet = new Set();
+			
+			    jobs.forEach(job => {
+			        const location = getJobLocation(job);
+			        if (location && location !== 'Not specified') locationSet.add(location);
+			
+			        const orgName = getOrganizationUnitName(job);
+			        if (orgName && orgName !== 'Not specified') jobTypeSet.add(orgName.trim());
+			    });
+			
+			    $('#locationFilter').html('<option value="All">Alla platser</option>');
+			    locationSet.forEach(location => {
+			        $('#locationFilter').append(`<option value="${location}">${location}</option>`);
+			    });
+			
+			    $('#jobTypeFilter').html('<option value="All">Alla verksamhetsområden</option>');
+			    jobTypeSet.forEach(type => {
+			        $('#jobTypeFilter').append(`<option value="${type}">${type}</option>`);
+			    });
+			}
 
             function displayJobs() {
                 $('#jobList').empty();
@@ -910,27 +921,29 @@
             }
 
             function buildJobCard(job) {
-                const jobDetailUrl = `job-details.html?jobId=${job.ad_id}`;
-                const organizationUnitName = job.organizations.length > 1
-                    ? job.organizations[1].nameorgunit
-                    : job.organizations[0]?.nameorgunit || 'Not specified';
-
-                return `
-          <div class="col-12 col-md-4 col-lg-4 mb-4">
-            <a href="${jobDetailUrl}" class="" style="text-decoration: none; color: inherit;" aria-label="Job details">
-              <div class="card h-100">
-                <div class="card-body">
-                  <div class="card-category"><span>${organizationUnitName}</span></div>
-                  <div class="card-title">${job.title}</div>
-                  <p class="card-text">${job.country}</p>
-                  <a href="${jobDetailUrl}" class="stretched-link">
-                    <img src="./files/arrow-right-thin.svg" class="stretched-link" alt="Details">
-                  </a>
-                </div>
-              </div>
-            </a>
-          </div>`;
-            }
+			    const jobDetailUrl = `job-details.html?jobId=${job.ad_id}`;
+			    const organizationUnitName = job.organizations.length > 1
+			        ? job.organizations[1].nameorgunit
+			        : job.organizations[0]?.nameorgunit || 'Not specified';
+			
+			    const location = getJobLocation(job);
+			
+			    return `
+			      <div class="col-12 col-md-4 col-lg-4 mb-4">
+			        <a href="${jobDetailUrl}" class="" style="text-decoration: none; color: inherit;" aria-label="Job details">
+			          <div class="card h-100">
+			            <div class="card-body">
+			              <div class="card-category"><span>${organizationUnitName}</span></div>
+			              <div class="card-title">${job.title}</div>
+			              <p class="card-text">${location}</p>
+			              <a href="${jobDetailUrl}" class="stretched-link">
+			                <img src="./files/arrow-right-thin.svg" class="stretched-link" alt="Details">
+			              </a>
+			            </div>
+			          </div>
+			        </a>
+			      </div>`;
+			}
 
             function updateLoadMoreVisibility(filteredCount) {
                 if (displayedJobs >= filteredCount) {
